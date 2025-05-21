@@ -1,0 +1,38 @@
+﻿@model Colleagues.ViewModels.TopPairProjectsViewModel
+
+<h2>Top Employee Pair Collaboration</h2>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <p>@Model.Message</p>
+}
+else if (Model.TopProjects != null && Model.TopProjects.Any())
+{
+    <p>
+        Employee ID #1: @Model.EmployeeId1 <br />
+        Employee ID #2: @Model.EmployeeId2 <br />
+        Total Days Worked Together: @Model.TotalDaysWorked
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Project ID</th>
+                <th>Days Worked Together</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var project in Model.TopProjects)
+            {
+                <tr>
+                    <td>@project.ProjectId</td>
+                    <td>@project.DaysWorked</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No data to display.</p>
+}
