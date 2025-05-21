@@ -20,3 +20,30 @@ Colleagues is an ASP.NET Core MVC web application designed to analyze employee c
 1. Clone the repository:
    ```bash
    git clone https://github.com/GeorgiMrchv/Colleagues.git
+
+Project Structure
+Controllers/: MVC controllers to handle HTTP requests.
+
+Models/: Data models representing employees and project info.
+
+Services/: Business logic, including collaboration calculation.
+
+Views/: Razor views for UI.
+
+wwwroot/: Static files including Bootstrap and custom CSS.
+
+Technologies Used
+ASP.NET Core MVC (.NET 6)
+
+Bootstrap 5 for styling
+
+C# for backend logic
+
+Razor Pages for the frontend
+
+Notes
+Bootstrap styles are included via local lib folder.
+
+If Bootstrap does not load correctly, verify static files are served and paths are correct.
+
+The application currently supports uploading and analyzing one CSV file at a time.
